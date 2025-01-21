@@ -1,6 +1,7 @@
-module github.com/jtdowney/age-kms-plugin
+module github.com/asgeirn/age-kms-plugin
 
-go 1.21.4
+go 1.23.0
+
 toolchain go1.23.5
 
 require (
