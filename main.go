@@ -17,7 +17,7 @@ import (
 )
 
 const (
-	Version = "v2beta1"
+	Version = "v2"
 	OK      = "ok"
 )
 
@@ -145,7 +145,7 @@ func loadRecipients(recipientsPath *string) (string, []age.Recipient, error) {
 	f.Seek(0, 0)
 	recipients, err := age.ParseRecipients(f)
 	if err != nil {
-		log.Panicf("Failed to parse recipients file %s: %s", *recipientsPath, err)
+		return "", nil, err
 	}
 
 	return keyId, recipients, nil
@@ -161,7 +161,7 @@ func loadIdentities(identityPath *string) ([]age.Identity, error) {
 	}
 	defer f.Close()
 
-	log.Print("Recipients file contents:")
+	log.Print("Identities file contents:")
 	io.Copy(stdoutDumper, f)
 
 	f.Seek(0, 0)
