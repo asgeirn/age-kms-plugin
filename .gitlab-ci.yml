@@ -9,6 +9,10 @@
 
 image: golang:latest
 
+default:
+  tags:
+    - k8s
+
 stages:
   - test
   - build
