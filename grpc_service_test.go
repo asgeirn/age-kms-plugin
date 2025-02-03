@@ -143,7 +143,7 @@ ready:
 }
 
 
-func TestAgeKmsService(t *testing.T) {
+func TestRealAgeKmsService(t *testing.T) {
 	t.Parallel()
 
 	log.Println("Generating test identity...")
