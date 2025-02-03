@@ -165,6 +165,7 @@ func TestAgeKmsService(t *testing.T) {
 	t.Cleanup(cancel)
 
 	address := filepath.Join(os.TempDir(), "age-kms.sock")
+	log.Printf("Trying to communicate over %v...\n", address)
 	plaintext := []byte("lorem ipsum dolor sit amet")
 	r := rand.New(rand.NewSource(time.Now().Unix()))
 	id, err := makeID(r.Read)
