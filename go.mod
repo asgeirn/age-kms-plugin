@@ -7,7 +7,7 @@ toolchain go1.24.1
 require (
 	filippo.io/age v1.2.1
 	google.golang.org/grpc v1.72.0
-	k8s.io/kms v0.33.0
+	k8s.io/kms v0.33.1
 )
 
 require (
